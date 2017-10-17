@@ -42,10 +42,7 @@ gulp.task('libs', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/animate/waypoints.min.js',
-		'app/libs/bootstrap/dist/js/bootstrap.js',
-		'app/libs/animate/animate-css.js',
-		'app/libs/OwlCarousel/dist/owl.carousel.min.js',
-		'app/libs/baguetteBox/baguetteBox.min.js',
+		'app/libs/jquery-smooth-scroll/jquery.smooth-scroll.js',
 		'app/libs/animate/animate-css.js'
 		])
 		.pipe(concat('libs.min.js'))
