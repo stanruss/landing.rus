@@ -1,4 +1,4 @@
-$('a').smoothScroll({offset: -20, speed: 600});
+$('a').smoothScroll({offset: 0, speed: 600});
 
 // $(function() {
 

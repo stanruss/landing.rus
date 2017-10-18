@@ -50,8 +50,60 @@ h1, h2, h3
 .sticky
 	position: fixed
 section
-	min-height: 1200px
-$colors: $accent, $green, $blue, $orange
+	position: relative
+	top: -44px
+	width: 100%
+	box-sizing: border-box
+	&.demos
+
+.demos-container
+	width: 1068px
+	+push-auto
+	height: 450px
+	&-left
+		float: left
+		display: block
+		width: 50%
+		height: 100%
+		background-size: cover
+		background-image: url(../img/block1.jpg)
+	&-right
+		float: right
+		display: block
+		position: relative
+		width: 50%
+		height: 100%
+.designText
+	height: 410px
+	position: absolute
+	top: 50%
+	margin-top: -220px
+	padding: 20px
+	display: block
+	.button a
+		color: $font-dark
+		background-color: $accent
+		outline: none
+		border: 1px darken($accent,25%) solid
+		padding: 0 35px
+		margin: 
+			top: 20px
+		float: left
+		line-height: 40px
+		height: 40px
+		font-family: $rb
+		text-transform: uppercase
+		background-image: none
+		+border-radius(2px,all)
+		&:hover
+			background-color: darken($main-color, 15%)
+			color: $accent
+			transition: all .5s ease
+			border: 1px darken($main-color,45%) solid
+	span
+		font-size: 14px
+		color: darken($font-color,30%)
+$colors: $font-color, $active-link 
 @for $i from 1 through length($colors)
 	section:nth-child(#{length($colors)}n+#{$i})
 		background-color: nth($colors, $i)
