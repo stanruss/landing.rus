@@ -51,5 +51,7 @@ h1, h2, h3
 	position: fixed
 section
 	min-height: 1200px
-	
-
+$colors: $accent, $green, $blue, $orange
+@for $i from 1 through length($colors)
+	section:nth-child(#{length($colors)}n+#{$i})
+		background-color: nth($colors, $i)
