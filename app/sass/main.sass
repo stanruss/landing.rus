@@ -54,12 +54,14 @@ section
 	top: -44px
 	width: 100%
 	box-sizing: border-box
-	&.demos
-
-.demos-container
-	width: 1068px
-	+push-auto
-	height: 450px
+.container
+		width: 1068px
+		+push-auto	
+.demos
+	.container
+		width: 1068px
+		+push-auto
+		height: 450px
 	&-left
 		float: left
 		display: block
@@ -94,7 +96,7 @@ section
 		font-family: $rb
 		text-transform: uppercase
 		background-image: none
-		+border-radius(2px,all)
+		+br(2px)
 		&:hover
 			background-color: darken($main-color, 15%)
 			color: $accent
@@ -103,6 +105,23 @@ section
 	span
 		font-size: 14px
 		color: darken($font-color,30%)
+.pages
+	width: 100%
+	box-sizing: border-box
+.left, .center, .right	
+	width: 356px
+	padding:
+		left: 103px
+		right: 103px
+		top: 20px
+		bottom: 20px
+	box-sizing: border-box
+	float: left
+.round
+	+round(150px,1px)
+	+push-auto
+	width: 150px
+	background-color: $accent
 $colors: $font-color, $active-link 
 @for $i from 1 through length($colors)
 	section:nth-child(#{length($colors)}n+#{$i})
